@@ -6,13 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A94BECEF2FDAE11C00B6F084 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = A94BECEE2FDAE11C00B6F084 /* Auth */; };
+		A94BECF12FDAE11C00B6F084 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = A94BECF02FDAE11C00B6F084 /* Storage */; };
+		A94BECF42FDAE12B00B6F084 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A94BECF32FDAE12B00B6F084 /* Supabase */; };
+		A94BED062FDAEEDD00B6F084 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A94BED052FDAEEDD00B6F084 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A9805D5F2FD2F3DA005C3629 /* umi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = umi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A94BECEA2FDAE0A800B6F084 /* Exceptions for "umi" folder in "umi" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A9805D5E2FD2F3DA005C3629 /* umi */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A9805D612FD2F3DA005C3629 /* umi */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A94BECEA2FDAE0A800B6F084 /* Exceptions for "umi" folder in "umi" target */,
+			);
 			path = umi;
 			sourceTree = "<group>";
 		};
@@ -23,16 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A94BED062FDAEEDD00B6F084 /* Kingfisher in Frameworks */,
+				A94BECF12FDAE11C00B6F084 /* Storage in Frameworks */,
+				A94BECEF2FDAE11C00B6F084 /* Auth in Frameworks */,
+				A94BECF42FDAE12B00B6F084 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A94BECF22FDAE12B00B6F084 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9805D562FD2F3DA005C3629 = {
 			isa = PBXGroup;
 			children = (
 				A9805D612FD2F3DA005C3629 /* umi */,
+				A94BECF22FDAE12B00B6F084 /* Frameworks */,
 				A9805D602FD2F3DA005C3629 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +97,10 @@
 			);
 			name = umi;
 			packageProductDependencies = (
+				A94BECEE2FDAE11C00B6F084 /* Auth */,
+				A94BECF02FDAE11C00B6F084 /* Storage */,
+				A94BECF32FDAE12B00B6F084 /* Supabase */,
+				A94BED052FDAEEDD00B6F084 /* Kingfisher */,
 			);
 			productName = umi;
 			productReference = A9805D5F2FD2F3DA005C3629 /* umi.app */;
@@ -94,6 +130,10 @@
 			);
 			mainGroup = A9805D562FD2F3DA005C3629;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A94BECED2FDAE11C00B6F084 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				A94BED042FDAEEDD00B6F084 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A9805D602FD2F3DA005C3629 /* Products */;
 			projectDirPath = "";
@@ -127,6 +167,8 @@
 /* Begin XCBuildConfiguration section */
 		A9805D682FD2F3DA005C3629 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = A9805D612FD2F3DA005C3629 /* umi */;
+			baseConfigurationReferenceRelativePath = Config/Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -189,6 +231,8 @@
 		};
 		A9805D692FD2F3DA005C3629 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = A9805D612FD2F3DA005C3629 /* umi */;
+			baseConfigurationReferenceRelativePath = Config/Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -246,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = umi/umi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XVM4X7JGBU;
@@ -254,6 +299,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = umi/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -291,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = umi/umi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XVM4X7JGBU;
@@ -299,6 +346,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = umi/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -353,6 +401,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A94BECED2FDAE11C00B6F084 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		A94BED042FDAEEDD00B6F084 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A94BECEE2FDAE11C00B6F084 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A94BECED2FDAE11C00B6F084 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		A94BECF02FDAE11C00B6F084 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A94BECED2FDAE11C00B6F084 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		A94BECF32FDAE12B00B6F084 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A94BECED2FDAE11C00B6F084 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		A94BED052FDAEEDD00B6F084 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A94BED042FDAEEDD00B6F084 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9805D572FD2F3DA005C3629 /* Project object */;
 }
