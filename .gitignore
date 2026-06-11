@@ -38,3 +38,6 @@ project.xcworkspace/xcuserdata/
 
 # Build
 build/
+
+# Secrets
+umi/Config/Secrets.xcconfig
